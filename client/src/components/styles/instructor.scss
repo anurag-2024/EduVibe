@@ -1,0 +1,65 @@
+@import '../../mixins.scss';
+.instructor {
+    padding: 6rem 8rem;
+    background-color: #ffffff;
+    @include md{
+        padding: 2rem;
+    }
+    &-header {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+        }
+    }
+
+    .slick-slider {
+        .slick-list {
+            padding: 0rem;
+        }
+
+        .slick-dots {
+            bottom: -2rem;
+
+            li {
+                margin: 0 0.5rem;
+
+                button:before {
+                    font-size: 12px;
+                    color: #999;
+                }
+
+                &.slick-active button:before {
+                    color: #333;
+                }
+            }
+        }
+
+        .slick-prev,
+        .slick-next {
+            width: 2rem;
+            height: 2rem;
+            z-index: 1;
+           @include md{
+            display: none !important;
+           }
+            &:before {
+                font-size: 20px;
+                color: #ffffff;
+            }
+        }
+
+        .slick-prev {
+            left: -2.5rem;
+        }
+
+        .slick-next {
+            right: -2.5rem;
+        }
+    }
+}
+
+

@@ -1,0 +1,88 @@
+.instructor-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+    margin: 0 1rem;
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+        .instructor-card-image {
+            img {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            }
+
+            .instructor-card-icons {
+                opacity: 1;
+                bottom: 10px;
+            }
+        }
+
+        .instructor-card-content h3 {
+            color: #007bff;
+        }
+    }
+
+    &-image {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 1rem;
+        position: relative;
+
+        img {
+            border-radius: 8px 8px 0 0;
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .instructor-card-icons {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;    
+            transition: bottom 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+
+            .icon {
+                background: rgba(255, 255, 255, 0.7);
+                border-radius: 50%;
+                width: 2.5rem;
+                height: 2.5rem;
+                padding: 0.5rem;
+                color: #0b0b0b;
+                font-size: 1.2rem;
+                transition: background 0.3s ease;
+
+                &:hover {
+                    background: #007bff;
+                }
+            }
+        }
+    }
+
+    &-content {
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            color: #666;
+        }
+    }
+}

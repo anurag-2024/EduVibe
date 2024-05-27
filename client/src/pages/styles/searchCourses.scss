@@ -1,0 +1,319 @@
+@import '../../mixins.scss';
+.search-courses {
+  padding: 0rem;
+  .search-courses-top {
+    width: 100%;
+    height: 9rem;
+    background-color: #efefef;
+    p {
+      font-size: 1rem;
+      color: #5c5b5b;
+      margin-left: 10rem;
+      font-weight: 450;
+      padding: 3rem 0;
+      @include md{
+        margin-left: 2rem;
+      }
+      .search-courses-top-heading {
+        .home {
+          cursor: pointer;
+        }
+
+        span {
+          margin-top: 3rem;
+          &:not(:last-child) {
+            margin-right: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .search-courses-middle {
+    background-color: white;
+    position: absolute;
+    top: 28%;
+    border-radius: 0.3rem;
+    left: 25%;
+    width: 50%;
+    @include md{
+      width: 90%;
+      left: 0;
+      margin: 0 1rem;
+    }
+    .search-courses-middle-searchBox {
+      display: flex;
+      align-items: center;
+      border: 1px solid #ffffff;
+      border-radius: 1rem;
+      padding: 0.5rem;
+      .search-icon {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: #000000;
+        margin-right: 1rem;
+        @include md{
+          font-size: 2.5rem;
+        }
+      }
+
+      input[type="text"] {
+        border: none;
+        outline: none;
+        padding: 0rem;
+        color: #0c0c0c;
+        font-size: 1rem;
+        width: 90%;
+        @include md{
+          width: 100%;
+        }
+      }
+
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        font-weight: 450;
+        padding: 0.8rem 1.8rem;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        @include md{
+          font-size: small;
+          padding: 0.3 1.3rem;
+        }
+        &:hover {
+          box-shadow: 9px 29px 38px -14px rgba(69, 36, 150, 0.64);
+          -webkit-box-shadow: 9px 29px 38px -14px rgba(69, 36, 150, 0.64);
+          -moz-box-shadow: 9px 29px 38px -14px rgba(69, 36, 150, 0.64);
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+
+  .search-courses-main {
+    display: flex;
+    background-color: #e7e7e7;
+    padding: 6rem 2rem;
+    @include md{
+      padding: 4rem 0;
+      flex-direction: column;
+    }
+    .filter-logo{
+      display: none;
+      @include md{
+        display: block;
+        text-align: center;
+        margin-left: 0.6rem;
+        >div:first-child{
+          margin-left: 1rem;
+          img{
+            padding: 0.7rem;
+            border-radius: 0.2rem;
+            background-color: #007bff;
+            border: 2px  solid #007bff; 
+          }
+        }
+      }
+    }
+    .show{
+      display: none;
+    }
+    .filters {
+      width: 30%;
+      height: fit-content;
+      border-radius: 4px;
+      margin-right: 1rem;
+      margin-left: 8rem;
+      padding: 1rem;
+      @include md{
+        width: 100%;
+        margin-left: 0;
+      }
+      .filter-container {
+        .filter-container-item {
+          margin-bottom: 1rem;
+          border-radius: 0.3rem;
+          background-color: #f3f2f2;
+          padding: 1rem;
+          h2{
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+            @include md{
+              font-size: 1.1rem;
+            } 
+          }
+          .accordian-header {
+            color: #333;
+            cursor: pointer;
+            margin-bottom: 0.5rem;
+            position: relative;
+
+            &.active::after {
+              transform: rotate(90deg);
+            }
+          }
+
+          .accordian-header::after {
+            content: '\02795';
+            font-size: 13px;
+            color: #777;
+            position: absolute;
+            right: 0;
+            top: 0.3rem;
+            transition: transform 0.3s;
+          }
+
+          .collapse {
+            display: none;
+            visibility: inherit;
+            &.show {
+              display: block;
+            }
+            .apply-filters {
+              margin-top: 1rem;
+              text-align: start;
+
+              button {
+                background-color: #007bff;
+                color: #000000;
+                border: none;
+                outline: none;
+                font-size: 1rem;
+                font-weight: 450;
+                padding: 0.5rem 1rem;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: background-color 0.3s ease;
+                @include md{
+                  font-size: 0.9rem;
+                }
+                &:hover {
+                  background-color: #0056b3;
+                }
+              }
+            }
+            .accordian-body {
+              margin-top: 2.5rem;
+              .accordian-body-item {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.5rem;
+                padding: 0.2rem;
+                .check-box {
+                  display: flex;
+                  align-items: center;
+
+                  input[type="checkbox"] {
+                    margin-right: 0.5rem;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    @include md{
+                      width: 1.3rem;
+                      height: 1.3rem;
+                    }
+                  }
+
+                  label {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    color: #333;
+                    @include md{
+                      font-size: 1rem;
+                    }
+                  }
+                }
+                .check-details {
+                  font-size: 0.9rem;
+                  color: #777;
+                }
+                
+              }
+            }
+          }
+          
+        }
+      }
+    }
+
+    .results {
+      width: 70%;
+      border-radius: 4px;
+      padding: 1rem;
+     @include md{
+      width: 100%;
+     }
+      .course-list {
+        display: flex;
+        flex-wrap: wrap;
+
+        > div {
+          margin: 0.5rem;
+        }
+      }
+
+      h2 {
+        font-size: 1.3rem;
+        color: #333;
+        padding-left: 2rem;
+        margin-bottom: 1rem;
+        @include md{
+          padding-left: 0.5rem;
+          font-size: 1.1rem;
+        }
+      }
+
+      .pagination {
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+        list-style: none;
+        padding: 0;
+        .arrow{
+          border: 1px solid #ccc;
+          padding: 0.5rem;
+          width: 3rem;
+          font-size: 1.4rem;
+          color: #424242;
+          font-weight: 700;
+          background-color: #dcdcdd;
+        }
+        .left{
+          margin-right: 1rem;
+        }
+        .right{
+          margin-left: 1rem;
+        }
+        button {
+          margin-right: 0.5rem;
+          cursor: pointer;
+          padding: 0.5rem;
+          width: 3rem;
+          border-radius: 50%;
+          transition: background-color 0.3s ease;
+      
+          &:hover {
+            background-color: #f8f9fa;
+          }
+      
+          &.active {
+            background-color: #007bff;
+            color: white;
+          }
+      
+          &.disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+          }
+        }
+      }
+
+    }
+  }
+}

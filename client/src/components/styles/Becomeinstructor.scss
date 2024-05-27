@@ -1,0 +1,119 @@
+@import '../../mixins.scss';
+.becomeInstructor {
+  padding: 10rem 10rem;
+  background-color: #e7e6e6;
+  padding-bottom: 18rem;
+  @include md{
+    padding: 1rem;
+    padding-bottom: 20rem;
+  }
+  .becomeInstructor-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+   @include md{
+    flex-direction: column;
+    gap: 0;
+   }
+    .becomeInstructor-container-1,
+    .becomeInstructor-container-2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #fafafa;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      max-width: 45%;
+      height: fit-content;
+      text-align: center;
+      @include md{
+        max-width: 100%;
+        margin-top: 10rem;
+        margin-bottom: 0rem;
+      }
+      img {
+        position: relative;
+        top: -8rem;
+        width: fit-content;
+        height: fit-content;
+        margin-bottom: 1.5rem;
+      }
+      .becomeInstructor-container-1-educator {
+        margin-top: -6rem;
+        h1 {
+          font-size: 2rem;
+          font-weight: 650;
+          color: #333;
+          margin-bottom: 1rem;
+          @include md{
+            font-size: 1.5rem;
+          }
+        }
+        p {
+          font-size: 1rem;
+          color: #555;
+          justify-content: center;
+          @include md{
+            font-size: 0.9rem;
+          }
+        }
+        .instructor-button {
+          margin-top: 2rem;
+          padding: 1rem 1.5rem;
+          font-size: 1rem;
+          font-weight: 500;
+          color: #fff;
+          background-color: #0d947b;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background-color 0.3s;
+          @include md{
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+          &:hover {
+            background-color: #0056b3;
+            box-shadow: 0px 4px 100px rgba(123, 140, 215, 0.1);
+          }
+        }
+      }
+      .becomeInstructor-container-1-business {
+        margin-top: -6rem;
+        h1 {
+          font-size: 2rem;
+          font-weight: 650;
+          color: #333;
+          margin-bottom: 1rem;
+        }
+        p {
+          font-size: 1rem;
+          color: #555;
+        }
+        .business-button{
+            margin-top: 2rem;
+            padding: 1rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #fff;
+            background-color: #0d947b;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            @include md{
+                margin-top: 1rem;
+                font-size: 0.9rem;
+            }
+            &:hover {
+              background-color: #0056b3;
+              box-shadow: 0px 4px 100px rgba(123, 140, 215, 0.1);
+            }
+        }
+      }
+    }
+  }
+}

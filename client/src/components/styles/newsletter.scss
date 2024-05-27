@@ -1,0 +1,101 @@
+@import '../../mixins.scss';
+.newsletter {
+  max-width: 50rem;
+  position: absolute;
+  left: 22%;
+  bottom:-1006%;
+  transform: translateZ(100%);
+  z-index: 8;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  @include md{
+    padding: 0;
+    left: 0;
+    bottom: -1670%;
+    width: calc(100% - 2rem);
+    margin: 1rem;
+  }
+  .newsletter-content {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 3.5rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+     @include md{
+        padding: 1rem 2rem;
+     }
+    .newsletter-text {
+      flex: 1;
+      min-width: 300px;
+      margin-bottom: 1rem;
+       @include md{
+         min-width: 100%;   
+       }
+      h2 {
+        font-size: 2.3rem;
+        font-weight: 620;
+        color: #232323;
+        margin-bottom: 0.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+        color: #747474;
+      }
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex: 1;
+      min-width: 300px;
+      align-items: center;
+      @include md{
+        flex-direction: column;
+        align-items: stretch;
+        min-width: 100%;
+        gap: 1rem;
+      }
+      input[type="email"] {
+        flex: 3;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 0.2rem 0 0 0.2rem;
+        outline: none;
+        @include md{
+            border-radius: 0.2rem;  
+        }
+        &:focus {
+          border-color: #007bff;
+        }
+
+        &::placeholder {
+          color: #999;
+        }
+      }
+
+      button {
+        flex: 1;
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        background-color: #007bff;
+        color: #fff;
+        border: 1.5px solid #007bff;
+        border-radius: 0 0.2rem 0.2rem 0;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        @include md{
+            border-radius: 0.2rem;
+        }
+        &:hover {
+          background-color: #0056b3;
+        }
+      }
+    }
+  }
+}
