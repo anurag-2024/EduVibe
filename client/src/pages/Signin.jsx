@@ -10,7 +10,7 @@ const Signin = () => {
                     <div className='signin-left-container'>
                         <div className='signin-left-container-top'>
                             <h1>Sign In</h1>
-                            <p>Don't have an account? <Link to='/signup'><span> Sign up</span></Link></p>
+                            <p>Don't have an account? <Link to='/signup/student'><span> Sign up</span></Link></p>
                         </div>
                         <div>
                             <form>

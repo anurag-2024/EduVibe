@@ -2,7 +2,7 @@ import React from 'react';
 import './styles/Becomeinstructor.scss';
 import educator from '../assets/educator.png';
 import business from '../assets/business.png';
-
+import { Link } from 'react-router-dom';
 const BecomeInstructor = () => {
   return (
     <div className='becomeInstructor'>
@@ -16,7 +16,9 @@ const BecomeInstructor = () => {
               Start teaching and earn money. Share your knowledge with a community of eager learners. 
               Develop your own unique teaching style. 
             </p>
+            <Link to='/become-instructor'>
             <button className='instructor-button'>APPLY AS INSTRUCTOR</button>
+            </Link>
           </div>
         </div>
         <div className='becomeInstructor-container-2'>

@@ -64,7 +64,7 @@ const Header = () => {
                                         <li><Link to='/search-courses'>My Courses</Link></li>
                                         <li><Link>My Cart</Link></li>
                                         <li><Link to='/signin'>Login</Link></li>
-                                        <li><a>Sign Up</a></li>
+                                        <li><Link to='/signup/student'>Sign Up</Link></li>
                                     </ul>
                                 </div>
                             )}
@@ -90,8 +90,8 @@ const Header = () => {
                                 <div className='cart'>
                                     <IoCartOutline />
                                 </div>
-                                <Link to='signin'><button className='btn btn-login'>Login</button></Link>
-                                <button className='btn btn-signup'>Sign Up</button>
+                                <Link to='/signin'><button className='btn btn-login'>Login</button></Link>
+                                <Link to='/signup/student'><button className='btn btn-signup'>Sign Up</button></Link>
                             </div>
                         </>
                     )}
